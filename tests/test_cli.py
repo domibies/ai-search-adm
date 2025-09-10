@@ -106,9 +106,7 @@ class TestClearCommand:
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.input")
     @patch("ai_search_adm.cli.console")
-    def test_clear_index_not_found(
-        self, _mock_console: Mock, _mock_input: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_clear_index_not_found(self, _mock_console: Mock, _mock_input: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_client.get_index.side_effect = ResourceNotFoundError("Not found")
         mock_mk_client.return_value = mock_client
@@ -128,9 +126,7 @@ class TestClearCommand:
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.input")
     @patch("ai_search_adm.cli.console")
-    def test_clear_user_cancels(
-        self, _mock_console: Mock, mock_input: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_clear_user_cancels(self, _mock_console: Mock, mock_input: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_client.get_index.return_value = Mock()
         mock_mk_client.return_value = mock_client
@@ -156,9 +152,7 @@ class TestClearCommand:
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.input")
     @patch("ai_search_adm.cli.console")
-    def test_clear_success(
-        self, _mock_console: Mock, mock_input: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_clear_success(self, _mock_console: Mock, mock_input: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_index = Mock()
         mock_index.name = "test-index"
@@ -217,9 +211,7 @@ class TestClearCommand:
 class TestStatsCommand:
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.console")
-    def test_stats_index_not_found(
-        self, _mock_console: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_stats_index_not_found(self, _mock_console: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_client.get_index_statistics.side_effect = ResourceNotFoundError("Not found")
         mock_mk_client.return_value = mock_client
@@ -238,9 +230,7 @@ class TestStatsCommand:
 
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.console")
-    def test_stats_success(
-        self, _mock_console: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_stats_success(self, _mock_console: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_stats = {
             "document_count": 12345,
@@ -265,9 +255,7 @@ class TestStatsCommand:
 
     @patch("ai_search_adm.cli._mk_client")
     @patch("ai_search_adm.cli.console")
-    def test_stats_without_vector_index(
-        self, _mock_console: Mock, mock_mk_client: Mock
-    ) -> None:
+    def test_stats_without_vector_index(self, _mock_console: Mock, mock_mk_client: Mock) -> None:
         mock_client = Mock()
         mock_stats = {
             "document_count": 100,
