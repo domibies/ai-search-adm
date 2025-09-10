@@ -16,7 +16,7 @@ Administration tool for Azure AI Search indexes.
 
 ## Installation
 
-> **Note**: This is currently in beta. To install the beta version, you may need to use `--pre` flag with pip or specify the exact version.
+> **Note**: This is currently in beta. `uvx` works seamlessly with beta versions. For `pip` and `pipx`, you may need to use `--pre` flag or specify exact versions.
 
 ### Using uvx (Recommended)
 Run directly without installation:
@@ -57,8 +57,11 @@ ai-search-adm --help
 
 ### Using pipx
 ```bash
-pipx install ai-search-adm
-ai-search-adm --help
+# For beta versions, use --pip-args with --pre
+pipx install --pip-args="--pre" ai-search-adm
+
+# Or run directly without installing (specify exact version for beta)
+pipx run --spec ai-search-adm==0.9.0b2 ai-search-adm --help
 ```
 
 **Note**: All methods work identically. `uvx` and `uv tool run` are fastest and avoid dependency conflicts by running in isolated environments.

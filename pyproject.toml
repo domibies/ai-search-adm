@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 license = "MIT"
 keywords = ["azure", "search", "cli", "administration"]
 authors = [
-  { name = "Dominique Biesmans", email = "your-email@example.com" },
+  { name = "domibies" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -46,10 +46,10 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/dominique-biesmans/ai-search-adm#readme"
-Issues = "https://github.com/dominique-biesmans/ai-search-adm/issues"
-Source = "https://github.com/dominique-biesmans/ai-search-adm"
-Homepage = "https://github.com/dominique-biesmans/ai-search-adm"
+Documentation = "https://github.com/domibies/ai-search-adm#readme"
+Issues = "https://github.com/domibies/ai-search-adm/issues"
+Source = "https://github.com/domibies/ai-search-adm"
+Homepage = "https://github.com/domibies/ai-search-adm"
 
 [project.scripts]
 ai-search-adm = "ai_search_adm.cli:app"
