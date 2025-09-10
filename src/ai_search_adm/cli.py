@@ -25,7 +25,7 @@ def _show_auth_info(endpoint: str, api_key: str | None, label: str = "") -> None
     """Display authentication information."""
     service_name = endpoint.split("//")[1].split(".")[0] if "//" in endpoint else endpoint
 
-    auth_table = Table(show_header=False, box=None, title=f"🔐 Authentication Info{' - ' + label if label else ''}")
+    auth_table = Table(show_header=False, box=None, title=f"Authentication Info{' - ' + label if label else ''}")
     auth_table.add_column("Property", style="dim")
     auth_table.add_column("Value")
 
@@ -136,7 +136,7 @@ def duplicate_index(
     else:
         _show_auth_info(endpoint, api_key)
 
-    table = Table(show_header=False, box=None, title="📋 Operation Details")
+    table = Table(show_header=False, box=None, title="Operation Details")
     table.add_column("Property", style="dim")
     table.add_column("Value")
     table.add_row("Source endpoint", f"[cyan]{src_ep}[/cyan]")
@@ -295,7 +295,7 @@ def clear_index(
     # Show authentication info
     _show_auth_info(endpoint, api_key)
 
-    table = Table(show_header=False, box=None, title="🗑️  Operation Details")
+    table = Table(show_header=False, box=None, title="Operation Details")
     table.add_column("Property", style="dim")
     table.add_column("Value")
     table.add_row("Endpoint", f"[cyan]{endpoint}[/cyan]")
@@ -383,7 +383,7 @@ def show_stats(
         stats = client.get_index_statistics(index)
 
         # Display statistics in a nice table
-        table = Table(show_header=False, box=None, title=f"📊 Statistics for '[magenta]{index}[/magenta]'")
+        table = Table(show_header=False, box=None, title=f"Statistics for '[magenta]{index}[/magenta]'")
         table.add_column("Property", style="dim")
         table.add_column("Value", style="cyan")
 
