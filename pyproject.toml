@@ -40,7 +40,7 @@ dependencies = [
 dev = [
   "pytest>=7.0.0",
   "pytest-cov>=4.0.0",
-  "black>=23.0.0",
+  "black>=25.1.0",
   "ruff>=0.1.0",
   "mypy>=1.0.0",
 ]
@@ -104,7 +104,7 @@ exclude_lines = [
 ]
 
 [tool.black]
-target-version = ["py311"]
+target-version = ["py311", "py312", "py313"]
 line-length = 120
 skip-string-normalization = true
 
@@ -150,6 +150,7 @@ ignore = [
   "PLR0915",
   "PLR2004",  # Magic value used in comparison
   "C901",     # Too complex
+  "S110",     # try-except-pass (intentional for optional etag attribute)
 ]
 unfixable = [
   "F401",
