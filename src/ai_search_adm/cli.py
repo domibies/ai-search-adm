@@ -13,7 +13,7 @@ from rich.table import Table
 
 app = typer.Typer(
     add_completion=False,
-    help="[bold cyan]Administration tool for Azure AI Search indexes.[/bold cyan]",
+    help="[bold cyan]Administration tool for Azure AI Search indexes.[/bold cyan]\n\n[yellow]⚠️  PRERELEASE: This is beta software - use with caution.[/yellow]",
     rich_markup_mode="rich",
     context_settings={"help_option_names": ["-h", "--help"]},
     no_args_is_help=True,

@@ -1,5 +1,7 @@
 # ai-search-adm
 
+> **⚠️ PRERELEASE SOFTWARE**: This is beta software. Features may change and bugs may exist. Use with caution in production environments.
+
 Administration tool for Azure AI Search indexes.
 
 ## Features
